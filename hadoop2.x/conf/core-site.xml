@@ -1,0 +1,10 @@
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://master:9000</value>
+	</property>
+<property>
+	<name>hadoop.tmp.dir</name>
+		<value>file:/usr/local/hadoop-2.8.3/tmp</value>
+	</property>
+</configuration>

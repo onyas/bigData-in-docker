@@ -1,0 +1,10 @@
+<configuration>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/usr/local/hadoop-1.2.1/tmp</value>
+	</property>
+	<property>
+		<name>fs.default.name</name>
+		<value>hdfs://172.16.0.110:9000</value>
+	</property>
+</configuration>

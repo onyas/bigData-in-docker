@@ -1,0 +1,18 @@
+<configuration>
+	<property>
+		<name>dfs.namenode.secondary.http-address</name>
+		<value>master:9001</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:/usr/local/hadoop-2.8.3/dfs/name</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>file:/usr/local/hadoop-2.8.3/dfs/data</value>
+	</property>
+	<property>
+		<name>dfs.repliction</name>
+		<value>3</value>
+	</property>
+</configuration>

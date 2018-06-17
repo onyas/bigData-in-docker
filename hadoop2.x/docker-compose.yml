@@ -1,0 +1,59 @@
+version:  '2'
+services:
+
+  master:
+    image: fineplace/hadoop2.x
+    container_name: hadoop-master
+    networks:
+      default:
+        ipv4_address: 172.16.0.110
+    extra_hosts:
+      - "slave1:172.16.0.111"
+      - "slave2:172.16.0.112"
+    hostname: master
+    environment:
+      ROLE: master
+    tty: true
+    stdin_open: true
+
+  slave1:
+    image: fineplace/hadoop2.x
+    container_name: hadoop-slave1
+    networks:
+      default:
+        ipv4_address: 172.16.0.111
+    extra_hosts:
+      - "master:172.16.0.110"
+      - "slave2:172.16.0.112"
+    hostname: slave1
+    environment:
+      ROLE: slave
+    tty: true
+    stdin_open: true
+
+  slave2:
+    image: fineplace/hadoop2.x
+    container_name: hadoop-slave2
+    networks:
+      default:
+        ipv4_address: 172.16.0.112
+    extra_hosts:
+      - "master:172.16.0.110"
+      - "slave1:172.16.0.111"
+    hostname: slave2
+    environment:
+      ROLE: slave
+    tty: true
+    stdin_open: true
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.0.0/16
+        gateway: 172.16.0.249
+

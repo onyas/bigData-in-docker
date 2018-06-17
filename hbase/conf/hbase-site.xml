@@ -1,0 +1,26 @@
+<configuration>
+        <property>
+                <name>hbase.tmp.dir</name>
+                <value>/var/hbase</value>
+        </property>
+        <property>
+                <name>hbase.rootdir</name>
+                <value>hdfs://master:9000/hbase</value>
+        </property>
+        <property>
+                <name>hbase.cluster.distributed</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.quorum</name>
+                <value>master,slave1,slave2</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.property.dataDir</name>
+                <value>/usr/local/hbase-1.2.6/zookeeper</value>
+        </property>
+        <property>
+                <name>hbase.master.info.port</name>
+                <value>60010</value>
+        </property> 
+</configuration>

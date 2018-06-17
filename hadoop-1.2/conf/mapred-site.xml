@@ -1,0 +1,6 @@
+<configuration>
+ 	<property>
+		<name>mapred.job.tracker</name>
+		<value>http://172.16.0.110:9001</value>
+ 	</property>
+</configuration>
