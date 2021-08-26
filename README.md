@@ -18,4 +18,4 @@ For the beginners, it is the environment that stop their further study. So in or
 
 ### Contributing, feedback, contact
 
-Any kind of feedback/criticism would be greatly appreciated. Welcome to pull request or submit issues or join our qq group chat(741686147)
+Any kind of feedback/criticism would be greatly appreciated. Welcome to pull request or submit issues.
